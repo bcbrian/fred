@@ -11,6 +11,7 @@ import {
 import Auth from "./routes/Auth";
 import Index from "./routes/Index";
 import DashBoard from "./routes/DashBoard";
+import View from "./routes/View";
 
 import PrivateRoute from "./components/PrivateRoute";
 import AuthRoute from "./components/AuthRoute";
@@ -34,6 +35,7 @@ function App() {
         <Switch>
           <PrivateRoute path="/dashboard" component={DashBoard} />
           <AuthRoute path="/auth" component={Auth} />
+          <Route path="/view" exact component={View} />
           <Route path="/" exact component={Index} />
           <Route render={() => <div>404</div>} />
         </Switch>
